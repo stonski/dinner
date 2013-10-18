@@ -6,7 +6,8 @@
 
 local storyboard = require( "storyboard" )
 local scene = storyboard.newScene()
-
+local offerTable = require("offerTable")
+local uiFunctions = require("offerTableUI")
 ----------------------------------------------------------------------------------
 -- 
 --	NOTE:
@@ -36,9 +37,9 @@ end
 
 -- Called immediately after scene has moved onscreen:
 function scene:enterScene( event )
+	print("enterScene offer")
 	local group = self.view
-	local offerTable = require("offerTable")
-	display.newText(offerTable.title, 50, 50, "Arial", 20)
+	uiFunctions.show(offerTable, group)
 	-----------------------------------------------------------------------------
 		
 	--	INSERT code here (e.g. start timers, load audio, start listeners, etc.)
@@ -51,7 +52,6 @@ end
 -- Called when scene is about to move offscreen:
 function scene:exitScene( event )
 	local group = self.view
-	
 	-----------------------------------------------------------------------------
 	
 	--	INSERT code here (e.g. stop timers, remove listeners, unload sounds, etc.)
