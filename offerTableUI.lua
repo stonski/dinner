@@ -10,19 +10,26 @@ returnTable.show = function(offerTable,group)
 		end
 	)
 	group:insert(text)
+
+	if (offerTable.isPurchased()) then
+		display.newText("gekauft", display.contentWidth/2, display.contentHeight, "Arial", 20)
+	else
+		showButtonBuy(group)
+	end
 	
+end
+
+function showButtonBuy(group)
 	local button = display.newImage("images/button_buy.jpg")
 	button.x=display.contentWidth/2
 	button.y=display.contentHeight
 	group:insert(button)
-	
+		
 	button:addEventListener("touch", button)
 	button.touch = function(event)
 		local storyboard = require("storyboard")
 		storyboard.gotoScene( "purchaseTemplate", {effect="fade"})
 	end
-	
-	
 end
 
 return returnTable

@@ -24,10 +24,12 @@ function scene:createScene( event )
 	local group = self.view
 	local text = display.newText("Kaufen Sie jetzt!", 1, 1, "Arial", 20)
 	
-	text:addEventListener("touch", button)
+	text:addEventListener("touch", text)
 	text.touch = function(event)
+		local purchaseTable = require("purchaseTable")
+		purchaseTable.purchase()
 		local storyboard = require("storyboard")
-		storyboard.gotoScene( "purchaseTemplate", {effect="fade"})
+		storyboard.gotoScene( "offerTemplate", {effect="fade"})
 	end
 	group:insert(text)
 	-----------------------------------------------------------------------------

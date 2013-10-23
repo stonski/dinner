@@ -23,7 +23,10 @@ local uiFunctions = require("offerTableUI")
 
 -- Called when the scene's view does not exist:
 function scene:createScene( event )
+	print ("createScene")
 	local group = self.view
+	local purchaseTable = require("purchaseTable")
+	purchaseTable.clear()
 
 	-----------------------------------------------------------------------------
 		
