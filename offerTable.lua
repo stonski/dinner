@@ -5,7 +5,7 @@ local offerTable ={
 
 function get()
 	offerTable.title = "Offer Title new"
-	print("loading");
+	print("loading data");
 end;
 
 get();

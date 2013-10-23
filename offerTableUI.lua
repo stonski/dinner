@@ -11,7 +11,11 @@ returnTable.show = function(offerTable,group)
 	)
 	group:insert(text)
 
-	local button = display.newImage("button.jpg")
+	
+	
+	
+	
+	local button = display.newImage("images/button_buy.jpg")
 	button.x=display.contentWidth/2
 	button.y=display.contentHeight
 	group:insert(button)
