@@ -10,10 +10,6 @@ returnTable.show = function(offerTable,group)
 		end
 	)
 	group:insert(text)
-
-	
-	
-	
 	
 	local button = display.newImage("images/button_buy.jpg")
 	button.x=display.contentWidth/2
@@ -22,7 +18,7 @@ returnTable.show = function(offerTable,group)
 	
 	button:addEventListener("touch", button)
 	button.touch = function(event)
-		local storyboard = require "storyboard"
+		local storyboard = require("storyboard")
 		storyboard.gotoScene( "purchaseTemplate", {effect="fade"})
 	end
 	
