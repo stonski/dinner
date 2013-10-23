@@ -22,7 +22,13 @@ local scene = storyboard.newScene()
 -- Called when the scene's view does not exist:
 function scene:createScene( event )
 	local group = self.view
-	local text = display.newText("Neue Szene!!!!!!!!!", math.random(0, display.contentWidth), math.random(0, display.contentHeight - 70), "Arial", 20)
+	local text = display.newText("Kaufen Sie jetzt!", 1, 1, "Arial", 20)
+	
+	text:addEventListener("touch", button)
+	text.touch = function(event)
+		local storyboard = require("storyboard")
+		storyboard.gotoScene( "purchaseTemplate", {effect="fade"})
+	end
 	group:insert(text)
 	-----------------------------------------------------------------------------
 		
