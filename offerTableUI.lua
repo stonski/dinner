@@ -23,7 +23,7 @@ returnTable.show = function(offerTable,group)
 	button:addEventListener("touch", button)
 	button.touch = function(event)
 		local storyboard = require "storyboard"
-		storyboard.gotoScene( "imageTemplate", {effect="fade"})
+		storyboard.gotoScene( "purchaseTemplate", {effect="fade"})
 	end
 	
 	
